@@ -1,20 +1,97 @@
 @import './reset.less';
-.layout{
+
+//全局
+.layout {
   max-width: 640px;
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  >.pyg_header{
-      height: 45px; 
-      padding: 5px;  
+
+  //头部
+  >.pyg_header {
+    height: 45px;
+    padding: 5px;
+    background-color: #eee;
   }
-  >.pyg_content{
+
+  //中间
+  >.pyg_content {
     flex: 1;
-    background-color: #444;
+    background-color: #eee;
+
+    >.pyg_nav {
+      display: flex;
+      background-color: #fff;
+
+      >a {
+        display: block;
+        width: 25%;
+        text-align: center;
+        padding: 5px;
+        color: #000;
+
+        >img {
+          width: 50%;
+        }
+      }
+    }
+
+
+    >.pyg_goodsList {
+      padding: 10px;
+
+      .pyg_pbox {
+        width: 100%;
+        padding-bottom: 5px;
+
+        >img {
+          width: 100%;
+          display: block;
+        }
+
+        >.pyg_sbox {
+          width: 49%;
+          margin-top: 10px;
+          float: left;
+          background-color: #fff;
+
+          >.pgy_good {
+            width: 100%;
+
+            >img {
+              width: 100%;
+              display: block;
+            }
+
+            >.pgy_desc {
+              color: #333;
+              font-size: 13px;
+              margin: 5px 0;
+            }
+
+            >.pyg_price {
+              color: red;
+            }
+          }
+
+          >.pyg_btncate {
+            width: 80%;
+            display: block;
+            margin: 5px auto;
+          }
+        }
+
+        >.pyg_sbox:nth-of-type(even) {
+          margin-left: 2%;
+        }
+      }
+    }
   }
-  >.pyg_footer{
+
+  //尾部
+  >.pyg_footer {
     background-color: red;
     height: 45px;
   }
